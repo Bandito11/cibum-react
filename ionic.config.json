@@ -1,0 +1,7 @@
+{
+  "name": "cibum-react",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
