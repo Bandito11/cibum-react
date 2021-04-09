@@ -46,13 +46,11 @@ const Home: React.FC<RouteComponentProps> = ({ history }) => {
   }
 
   useEffect(() => {
-    if (ingredientsData.current.length === 0) {
-      (async function genIngredients() {
-        ingredientsData.current = await getIngredients();
-        setIngredient(ingredientsData.current);
-      })();
-    }
-  });
+    (async function genIngredients() {
+      ingredientsData.current = await getIngredients();
+      setIngredient(ingredientsData.current);
+    })();
+  }, []);
   return (
     <IonPage>
       <IonHeader>
